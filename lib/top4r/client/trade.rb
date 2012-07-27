@@ -25,7 +25,7 @@ class Top4R::Client
       trades = Top4R::Trade.unmarshal(result["trades"]["trade"])
       trades.each {|trade| bless_model(trade); yield trade if block_given?}
       @total_results = result["total_results"].to_i
-      @has_next = result['has_next'] == 'true'
+      @has_next = result['has_next']
     else
       @total_results = 0
       trades = []
