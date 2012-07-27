@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 class Top4R::Client
   alias :old_inspect :inspect
-  attr_accessor :total_results, :parameters, :session
+  attr_accessor :total_results, :parameters, :session, :has_next
   attr_reader :login
   
   def inspect
