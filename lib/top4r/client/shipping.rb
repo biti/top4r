@@ -9,7 +9,7 @@ class Top4R::Client
   }
   
   @@DELIVERY_METHODS = {
-    :send => 'taobao.delivery.send'
+    :send => 'taobao.logistics.offline.send'
   }
   
   def areas(method = :list, options = {}, &block)
