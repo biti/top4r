@@ -1,0 +1,9 @@
+<% @items_onsale.each do |item| %>
+  <%= item.num_iid %><%= item.title %><br/>
+<% end %>  
+<br/><br/>
+
+<% @skus.each do |sku|%>
+  <%= sku.num_iid %> <%= sku.sku_id %> <%= sku.properties_name %> <%= sku.price %><br/>
+<% end %>
+<p/>

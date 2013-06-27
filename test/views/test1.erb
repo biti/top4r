@@ -1,0 +1,41 @@
+<h3>User:</h3>
+
+logged_in?: <%= @top.logged_in? %><br>
+nick: <%= @top.login %><br>
+users query: <br>
+
+
+<h2>Items on sale:</h2>
+
+<% @items_onsale.each do |item| %>
+	<%= item.title %><br>
+	<%= item.approve_status %><br/>
+	<%= item.num %><br>
+	<%= item.detail_url %><br>
+	<%= item.props %><br/>
+	<skus>============<br/>
+	
+	<hr/>
+<% end %>
+
+<h2>Items inventory:</h2>
+
+<% @top.items_inventory.each do |item| %>
+	<%= item.title %><br>
+	<%= item.approve_status %><br/>
+	<%= item.num %><br>
+	<%= item.detail_url %><br>
+	<%= item.props %><br/>
+	<%= item.skus.inspect %><br/>
+<% end %>
+
+<h2>Items list:</h2>
+
+<% @top.items_list('1500015751646,1500015623484').each do |item| %>
+	<%= item.title %><br>
+	<%= item.approve_status %><br/>
+	<%= item.num %><br>
+	<%= item.detail_url %><br>
+	<%= item.props %><br/>
+	<%= item.skus.inspect %><br/>
+<% end %>
